@@ -1,28 +1,30 @@
 *{
     box-sizing: border-box;
-    padding:0;
-    margin:0;
-    max-width:100%; /*this tells elements that they can never be bigger than their parents*/
-    /* border:1px solid grey; */
+    padding: 0;
+    margin: 0;
+    max-width: 100%; /*tells elements that they can never be bigger than their parents
+    */
+    /* border: 1px solid limegreen; */
 }
-/*General Styles*/
+
+/*General Styles*/ 
 html{
-    font-size:62.5%;
+    font-size: 62.5%;
 }
 body{
-    font-size:1.8rem;
+    font-size: 1.8rem;
     font-family: 'Lato', sans-serif;
     line-height:2;
-    color:#4f4f4f;
+    color: #4f4f4f;
 }
 button, a{
     font-family: 'Lato', sans-serif;
 }
-/*beginning of button animation*/ 
+/*beginning of button animation*/
 button{
-    background:#1ABC9C;
-    background: linear-gradient(0deg, #1ABC9C 0%, #1ABC9C 100%);
-    color:#fff;
+    background: #BB8FCE;
+    color: #fff;
+    background: linear-gradient(0deg, white 0%, #C39BD3 100%);
     font-size:1.8rem;
     width: 130px;
     height: 40px;
@@ -30,85 +32,87 @@ button{
     padding: 0;
     border: none;
     transition: all 0.3s ease;
-    margin:4% 0;
+    margin: 4% 0;
 }
-  span.btn{
+span.btn{
     position: relative;
     display: block;
     width: 100%;
     height: 100%;
-  }
-  button:before,
-  button:after {
-    position: absolute;
-    content: "";
-    right: 0;
-    top: 0;
-    background: #1ABC9C;
-    transition: all 0.3s ease;
-  }
-  button:before {
+}
+button:before, button:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: #66357b;
+  transition: all 0.3s ease;
+}
+button:before {
     height: 0%;
     width: 2px;
   }
-  button:after {
+button:after {
     width: 0%;
     height: 2px;
   }
-  button:hover{
-     background: transparent;
+ button:hover{
+    background: #fff;       /*i changed this to white instead of transparent so we could see the footer when I hover over the button*/
     box-shadow: none;
   }
-  button:hover:before {
+button:hover:before {
     height: 100%;
   }
-  button:hover:after {
+button:hover:after {
     width: 100%;
   }
-  button span.btn:hover{
-     color: #1ABC9C;
-  }
-  button span.btn:before,
-  button span.btn:after {
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: 0;
-     background:#1ABC9C;
-    transition: all 0.3s ease;
-  }
-  button span.btn:before {
-    width: 2px;
-    height: 0%;
-  }
-  button span.btn:after {
-    width: 0%;
-    height: 2px;
-  }
-  button span.btn:hover:before {
-    height: 100%;
-  }
-  button span.btn:hover:after {
-    width: 100%;
-  }
-/*end of button animation*/  
+button span.btn:hover{
+    color: #4f4f4f;
+}
+button span.btn:hover{
+    color: rgb(124, 218, 212);
+ }
+button span.btn:before, button span.btn:after {
+   position: absolute;
+   content: "";
+   left: 0;
+   bottom: 0;
+   background: rgb(66, 224, 216);
+   transition: all 0.3s ease;
+ }
+button span.btn:before {
+   width: 2px;
+   height: 0%;
+ }
+button span.btn:after {
+   width: 0%;
+   height: 2px;
+ }
+ button span.btn:hover:before {
+   height: 100%;
+ }
+button span.btn:hover:after {
+   width: 100%;
+ }
+/*end of button animation*/
+ 
 a{
     text-decoration: none;
-    color:#4f4f4f;
+    color: #4f4f4f;
 }
 a:hover{
-    color:#1ABC9C;
+   color: rgb(66, 224, 216);
 }
-h1, h2, h3{
+h1,h2,h3{
     font-family: 'Lustria', serif;
-    letter-spacing:3px;
-    text-align:center;
+    letter-spacing: 3px;
+    text-align: center;
+}
+span{   /* to change font of your name inline */
+    font-family: 'Abril Fatface', cursive;
+    color: #512E5F;
 }
 h1 span{
-    font-family: 'Monoton', cursive;
-    color:#1ABC9C;
-}
-h1{
     font-size:6rem;
 }
 h2{
@@ -118,8 +122,10 @@ section{
     padding:4% 0;
 }
 .box{
-    border:4px solid #1ABC9C;
+    border: 2px solid rgb(66, 224, 216);
 }
+
+
 /*header section styles*/
 nav.main{
     display:flex;
@@ -129,131 +135,76 @@ nav.main{
     width:50%;
     display:flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items:center; /*centers things vertically*/
 }
 
 /*top section styles*/
 .top{
-    height:70vh;
-    display:flex;
-    justify-content: center;
+    height: 70vh;
+    display: flex;
+    justify-content:center;
     align-items: center;
-    text-align:center;
+    text-align: center;
 }
-/*About Me Section Styles*/
+
+/*about me section styles*/
 #about{
     display:flex;
     justify-content: space-around;
-    height:95vh;
+    height: 95vh;
 }
 .left{
     width:40%;
-    display:flex;
+    display:flex; 
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items:flex-start;
+}
+.left img{
+    width: 80%;
+    /* display:flex;  --can do either this or above
+    justify-content: flex-end; */
 }
 .right{
     width:58%;
     display:flex;
-    justify-content: flex-start;
+    justify-content:center;
     align-items: flex-end;
 }
 .right .box{
-    width:80%;
+    width: 80%;
     padding:4%;
 }
-.left img{
-    width:80%;
-}
 
-/*Project Section Styles*/
+/*projects section styles*/
 .projects{
-    text-align:center;
+    text-align: center;
 }
 .container{
-    display:flex;
-    justify-content: space-around;
-    flex-wrap:wrap;
+  display:flex;
+  justify-content: space-around;  
 }
 .container .box{
-    width:25%;
+    width: 25%;
 }
 
 /*footer section styles*/
 footer{
-    background-color:#1ABC9C;
-    padding:4% 0;
-    color:#fff;
-    display:flex;
+    background-color: #C39BD3;
+    padding: 4% 0;
+    color: white;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 footer div{
     width:50%;
-    text-align:center;
+    text-align: center;
 }
-footer a i{
-    color:#fff;
-    font-size:5rem;
+footer a i{          
+   /* color: #fff;  didn't want to make it white */
+   font-size: 2rem;
 }
-button.special{
-    width:auto;
-    height:auto;
-    background:#fff;
-    color:#1ABC9C;
-    border:4px solid #fff;
-    transition:2s;
-    padding:1% 4%;
-}
-button.special:hover{
-    background: #1ABC9C;
-    color:#fff;
-}
-
 .social{
-    display:flex;
-    justify-content: space-evenly;
+    display: flex;
+    justify-content:space-between;
 }
-
-/*Projects page*/
-.container.projectPage .box{
-    width:30%;
-    height:40vh;
-    margin:2% 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.project1{
-    background-image:url('../images/coffee.jpg');
-}
-.project2{
-    background-image:url('../images/flowers.jpg');
-}
-.project3{
-    background-image:url('../images/hotel.jpg');
-}
-.project4{
-    background-image:url('../images/icecream.jpg');
-}
-.project5{
-    background-image:url('../images/wrestling.jpg');
-}
-.project6{
-    background-image:url('../images/yoga.jpg');
-}
-
-.container.projectPage .box div{
-    width:100%;
-    height:40vh;
-    background-color:rgba(16, 200, 154, 0.863);
-    display:none;
-}
-.container.projectPage .box:hover div{
-    display:block;
-    text-align:center;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
